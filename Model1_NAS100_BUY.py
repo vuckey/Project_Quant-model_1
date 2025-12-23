@@ -22,7 +22,7 @@ data = []
 model_accuracy_data=[]
 good_symbols=[]
 booster = xgb.Booster()
-booster.load_model(r"The path of the model ( "xgboost_model1.json" file) ")
+booster.load_model(r"The path of the model ( 'xgboost_model1.json' file) ")
 
 for symbol in ticker_array:
     request_params = StockBarsRequest(
@@ -86,3 +86,4 @@ accuracy_file=pd.DataFrame(model_accuracy_data)
 path = os.path.join("data", "model_performance", file_name)
 
 accuracy_file.to_json(path, orient="index", indent=2)
+
