@@ -1,17 +1,25 @@
 # Project_Quant-model_1
 This is my first day traiding model that predicts the out come of the next day using OHLCV stock data mertrics.
 This is a tutorial of how to setup the model so that it could trade stocks:
+
 1) Model setup
+   
   a) Model1_NAS100_BUY.py
+  
     Enter your Alpaca API key and secret key on lines 19 and 73
+    
     On line 14, enter the path to the Nasdaq 100 (NDX).csv file (included in the repository)
+    
     On line 24, enter the path to the trained model file:
       xgboost_model1.json
+      
     This script is responsible for selecting and buying stocks based on the model’s predictions.
 
   b) Model1_SELL.py
-    Enter your Alpaca API key and secret key on lines 4 and 5
+  
+    Enter your Alpaca API key and secret key on lines 4 and 5.
     This script handles selling positions before market close.
+    
 2) Automated execution (optional)
   To automate the buying and selling process, you can use Windows Task Scheduler.
   This is the setup I used:
